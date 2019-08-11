@@ -39,7 +39,6 @@ export const searchCocktailWithNameAction = (name: string, cancelToken: CancelTo
         return Promise.resolve(drinks);
       })
       .catch((error) => {
-        console.log('Error catch', error);
         dispatch(setSearchingAction(false));
 
         return Promise.reject(error);
